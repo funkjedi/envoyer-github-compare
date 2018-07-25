@@ -1,6 +1,6 @@
   {
     "name": "Envoyer Github Compare",
-    "version": "0.1",
+    "version": "0.2",
     "description": "Adds button to compare the last deployed commit with the branch tip.",
     "icons": {
       "128": "icon128.png"
@@ -8,6 +8,7 @@
     "content_scripts": [
       {
         "matches": ["https://envoyer.io/*"],
+        "css": ["style.css"],
         "js": ["contentscript.js"]
       }
     ],
