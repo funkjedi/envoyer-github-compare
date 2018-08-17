@@ -1,8 +1,9 @@
 
-#modal-update-environment .modal-dialog {
-	width: 95% !important;
+#modal-environment-key .modal-dialog {
+	max-width: 95% !important;
 }
 
 #environment-contents {
-	font-size: 12px;
+	font-family: Inconsolata, monospace !important;
+	font-size: 14px;
 }
