@@ -5,7 +5,7 @@ compareBtn.className = 'btn btn-default';
 compareBtn.innerHTML = '<i class="fa fa-stack-overflow with-text"></i> Compare';
 
 compareBtn.onclick = function() {
-	var container = document.querySelector('#recent-deployments .card-body table tr:first-child td:nth-child(3) div');
+	var container = document.querySelector('#recent-deployments .card table tbody tr:first-child td:nth-child(3) div');
 	if (container) {
 		var branch = container.innerText.replace(/^.*\((.*)\).*$/, '$1');
 		var commit = container.querySelector('a');
@@ -17,7 +17,7 @@ compareBtn.onclick = function() {
 };
 
 
-// check inside interval as angular may not have
+// check inside interval as vue may not have
 // initiated yet at the time the extention content script is run
 var intervalID = setInterval(function() {
 	var deployBtn = document.querySelector('#app > div > .section-header button.btn-primary');
@@ -26,4 +26,3 @@ var intervalID = setInterval(function() {
 		deployBtn.insertAdjacentElement('beforebegin', compareBtn);
 	}
 },100)
-
