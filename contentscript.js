@@ -5,7 +5,7 @@ compareBtn.className = 'btn btn-default';
 compareBtn.innerHTML = '<i class="fa fa-stack-overflow with-text"></i> Compare';
 
 compareBtn.onclick = function() {
-	var container = document.querySelector('#recent-deployments .card table tbody tr:first-child td:nth-child(3) div');
+	var container = document.querySelector('#recent-deployments div table tbody tr:first-child td:nth-child(3) div');
 	if (container) {
 		var branch = container.innerText.replace(/^.*\((.*)\).*$/, '$1');
 		var commit = container.querySelector('a');
